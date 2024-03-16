@@ -36,8 +36,22 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const yourContract = await hre.ethers.getContract<Contract>("Zycket", deployer);
   console.log("👋 Initial greeting:", await yourContract.greeting());
 };
+const deployYourContract2: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
-export default deployYourContract;
+  const { deployer } = await hre.getNamedAccounts();
+  const { deploy } = hre.deployments;
+
+  const deploySmartContract = await deploy("Zycket", {
+    from: deployer,
+    args: [deployer],
+    log: true,
+    autoMine: true,
+  });
+
+  console.log("New address", deploySmartContract.address)
+};
+
+export default deployYourContract2;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
