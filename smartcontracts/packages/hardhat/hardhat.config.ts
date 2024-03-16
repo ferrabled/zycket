@@ -129,7 +129,12 @@ const config: HardhatUserConfig = {
     chilliz: {
       url: "https://spicy-rpc.chiliz.com",
       accounts: [deployerPrivateKey],
-    },
+    }, 
+    alfajores: {
+      url: "https://alfajores-forno.celo-testnet.org",
+      accounts: [deployerPrivateKey],
+      chainId: 44787
+    }
   },
   // configuration for harhdat-verify plugin
   etherscan: {
