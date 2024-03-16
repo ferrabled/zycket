@@ -15,8 +15,8 @@ import { ChainId } from "@biconomy/core-types";
         });
       }
       //console.log(embeddedWallet.connector?.getPublicClient().then((res:any) => console.log(res)));
-      //TODO fix provider
-      const newProvider = await embeddedWallet.connector.getPublicClient();
+      //TODO provider is being shown as undefined
+      const newProvider = await embeddedWallet.connector?.getPublicClient();
       const newSigner = await embeddedWallet.connector?.ethers?.getSigner();
       console.log("Provider")
       console.log(newProvider);

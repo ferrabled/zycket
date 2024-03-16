@@ -36,13 +36,9 @@ export default function RootLayout({
 
   useEffect(() => {
     const createAndSetSmartAccount = async () => {
-      console.log("KAAJS")
-      console.log(provider)
-      console.log(signer)
       const newSmartAccount = await createSmartAccount(provider, signer);
       setSmartAccount(newSmartAccount);
-      const saAddress = await smartAccount.getAccountAddress();
-      console.log("SA Address", saAddress);
+      
 
     };
 
