@@ -28,6 +28,7 @@ import SendTransaction from "@/components/biconomy/transaction";
 import { set } from "date-fns";
 import { Transaction2 } from "@/components/biconomy/transaction2";
 import { Button } from "@/components/ui/button";
+import ZHeader from "@/components/zheader";
 
 export default function RootLayout({
   children,
@@ -76,25 +77,22 @@ export default function RootLayout({
             evmNetworks,
           }}
         >
+         
           <DynamicWagmiConnector>
-            <DynamicWidget />
-           {/* <SendTransaction />
-             {smartAccount && (
-              <div>
-                <h1>Smart Account</h1>
-                <p>Address: {smartAddress}</p>
-                <p>Balance: {smartAccount.balance}</p>
-              <Button onClick={() => Transaction2(smartAccount)}>Transaction2</Button>
-              </div>
-              
+            <div className="h-20 flex flex-row justify-between align-center px-10">
+            <ZHeader />
+            <div className="pt-[16px]">
+              <DynamicWidget />
+            </div>
+            </div>
 
-            )} */}
             <Main
               provider={provider}
               setProvider={setProvider}
               signer={signer}
               setSigner={setSigner}
             />
+           
             {children}
           </DynamicWagmiConnector>
         </DynamicContextProvider>
