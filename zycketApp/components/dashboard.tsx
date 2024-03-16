@@ -1,22 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { AvatarImage, Avatar } from "@/components/ui/avatar"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-export default function Component() {
+export default function DashboardComponent() {
   return (
     <div key="1" className="min-h-screen bg-gray-100 p-8">
-      <header className="flex items-center justify-between pb-6">
-        <h1 className="text-2xl font-bold text-gray-800">zycket</h1>
-        <nav className="flex items-center space-x-4">
-          <Button variant="ghost">Calendars</Button>
-          <Button variant="ghost">Explore</Button>
-          <Button variant="default">Create event</Button>
-          <Avatar>
-            <AvatarImage alt="User Avatar" src="/placeholder.svg?height=32&width=32" />
-          </Avatar>
-        </nav>
-      </header>
       <main>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-800">Events</h2>
