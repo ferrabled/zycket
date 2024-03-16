@@ -1,17 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ethers } from "ethers";
 const abi = require("../../../contracts/Zycket.json").abi;
-const bytecode = require("../../../contracts/Zycket.json").bytecode;
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
-    const metadataUri = req.body.metadataUri;
+    const collectionAddress = req.body.collectionAddress;
+    const sentToAddress = req.body.sentToAddress;
 
-    if (!metadataUri) {
-      res.status(400).json({ message: "metadataUri is required" });
+    if (!collectionAddress) {
+      res.status(400).json({ message: "contractAddress is required" });
+      return;
+    }
+    if (!sentToAddress) {
+      res.status(400).json({ message: "sentToAddress is required" });
       return;
     }
 
@@ -20,12 +24,8 @@ export default async function handler(
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
     const owner = wallet.connect(provider);
 
-    const contractFactory = new ethers.ContractFactory(abi, bytecode, wallet);
-    const deploy = await contractFactory.deploy(owner.getAddress(), metadataUri);
-
-    await deploy.deployed();
-
-    console.log("Contract deployed to:", deploy.address);
+    const yourContract = new ethers.Contract(collectionAddress, abi, owner);
+    await yourContract.safeMint(sentToAddress);
 
     res.status(200).json({
       message: "Sucess",
