@@ -1,20 +1,4 @@
 export const evmNetworks = [
-    /* {
-      blockExplorerUrls: ['https://etherscan.io/'],
-      chainId: 1,
-      chainName: 'Ethereum Mainnet',
-      iconUrls: ['https://app.dynamic.xyz/assets/networks/eth.svg'],
-      name: 'Ethereum',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'Ether',
-        symbol: 'ETH',
-      },
-      networkId: 1,
-      
-      rpcUrls: ['https://mainnet.infura.io/v3/'],
-      vanityName: 'ETH Mainnet',
-    }, */
   {
       blockExplorerUrls: ['https://testnet.chiliscan.com/'],
       chainId: 88882,
@@ -28,22 +12,21 @@ export const evmNetworks = [
       },
       networkId: 88882,
       rpcUrls: ['https://spicy-rpc.chiliz.com/'],
-      
       vanityName: 'Spicy Chiliz',
     },
-    /* {
-      blockExplorerUrls: ['https://polygonscan.com/'],
-      chainId: 137,
-      chainName: 'Matic Mainnet',
-      iconUrls: ["https://app.dynamic.xyz/assets/networks/polygon.svg"],
-      name: 'Polygon',
+    {
+      blockExplorerUrls: ['https://alfajores.celoscan.io'],
+      chainId: 44787,
+      chainName: 'Celo Alfajores',
+      iconUrls: ["https://app.dynamic.xyz/assets/networks/celo.svg"],
+      name: 'Celo Alfajores',
       nativeCurrency: {
         decimals: 18,
-        name: 'MATIC',
-        symbol: 'MATIC',
+        name: 'CELO',
+        symbol: 'CELO',
       },
-      networkId: 137,
-      rpcUrls: ['https://polygon-rpc.com'],    
-      vanityName: 'Polygon',
-    }, */
+      networkId: 44787,
+      rpcUrls: ['	https://alfajores-forno.celo-testnet.org'],    
+      vanityName: 'Celo Alfajores',
+    },
   ];
