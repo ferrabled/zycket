@@ -1,0 +1,19 @@
+basesepolia:
+  name: basesepolia
+  chainId: 84532
+  domainId: 84532
+  protocol: ethereum
+  rpcUrls:
+    - http: https://base-sepolia.blockpi.network/v1/rpc/public
+  blocks:
+    confirmations: 2
+    reorgPeriod: 2
+    estimateBlockTime: 2
+sepolia:
+  name: sepolia
+  chainId: 11155111
+  domainId: 11155111
+  protocol: ethereum
+  rpcUrls:
+    - http: https://rpc2.sepolia.org
+

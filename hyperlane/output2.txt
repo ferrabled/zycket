@@ -1,0 +1,565 @@
+osx@MacBook-Pro-106 hyperlane % hyperlane deploy core --targets sepolia,alfajores,basesepolia,arbitrumsepolia,spicy --chains chains.yaml  --ism ism.yaml  --key 0x7e721b34f78b0f4234bf3cd62f50766869b6e70ac7e2df777a3e11c53b75ac43
+
+Hyperlane CLI
+Hyperlane permissionless core deployment
+----------------------------------------
+Reading file configs in chains.yaml
+All chain configs in chains.yaml are valid
+
+Deployments can be totally new or can use some existing contract addresses.
+? Do you want use some existing contract addresses? yes
+? Select contract deployment artifacts file core-deployment-2024-03-16-11-23-25.json
+Found existing artifacts for chains: sepolia, basesepolia
+All multisig configs in ism.yaml are valid
+Found configs for chains: sepolia, alfajores, basesepolia, arbitrumsepolia, spicy
+
+Deployment plan
+===============
+Transaction signer and owner of new contracts will be 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploying to sepolia, alfajores, basesepolia, arbitrumsepolia, spicy
+There are several contracts required for each chain but contracts in the Hyperlane SDK or your artifacts will be skipped
+? Is this deployment plan correct? yes
+Running pre-flight checks...
+Chains are valid ✅
+Signer is valid ✅
+Balances are sufficient ✅
+All systems ready, captain! Beginning deployment...
+Contract addresses will be written to artifacts/core-deployment-2024-03-16-11-51-57.json
+Agent configs will be written to artifacts/agent-config-2024-03-16-11-51-57.json
+Deploying ISM factory contracts
+Start deploy to sepolia,alfajores,basesepolia,arbitrumsepolia,spicy
+Deploying to sepolia from https://sepolia.etherscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered merkleRootMultisigIsmFactory on sepolia 0x0a71AcC99967829eE305a285750017C4916Ca269
+Recovered messageIdMultisigIsmFactory on sepolia 0xFEb9585b2f948c1eD74034205a7439261a9d27DD
+Recovered aggregationIsmFactory on sepolia 0xC83e12EF2627ACE445C298e6eC418684918a6002
+Recovered aggregationHookFactory on sepolia 0x160C28C92cA453570aD7C031972b58d5Dd128F72
+Recovered routingIsmFactory on sepolia 0x3F100cBBE5FD5466BdB4B3a15Ac226957e7965Ad
+Deploying to alfajores from https://alfajores.celoscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered merkleRootMultisigIsmFactory on alfajores 0xa9C7e306C0941896CA1fd528aA59089571D8D67E
+Recovered messageIdMultisigIsmFactory on alfajores 0xC1b8c0e56D6a34940Ee2B86172450B54AFd633A7
+Recovered aggregationIsmFactory on alfajores 0x4bE8AC22f506B1504C93C3A5b1579C5e7c550D9C
+Recovered aggregationHookFactory on alfajores 0x71bB34Ee833467443628CEdFAA188B2387827Cee
+Recovered routingIsmFactory on alfajores 0x30d9A03762431F8A917a0C469E7A62Bf55092Ca6
+Deploying to basesepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered merkleRootMultisigIsmFactory on basesepolia 0x3A95c7678A802dF27dF74465B7c112053031F437
+Recovered messageIdMultisigIsmFactory on basesepolia 0x5bC9ee5C418ed322e3EBda892208C1cc4c95500c
+Recovered aggregationIsmFactory on basesepolia 0x91Ba56E827dC4A23C015Cd1d8c82D5e658c4BB47
+Recovered aggregationHookFactory on basesepolia 0xAE62178eed7a7fBAB983BE1914A8a31663f4174A
+Recovered routingIsmFactory on basesepolia 0x2DBEB34648D98a337e6E39865A6b975a83975DD9
+Deploying to arbitrumsepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy merkleRootMultisigIsmFactory on arbitrumsepolia
+Pending 0x417f2c897cf891b26fc1249dc59289034d1a87ff52f3ce7c387ba19789112392 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy messageIdMultisigIsmFactory on arbitrumsepolia
+Pending 0xa1822daf8e56584dec1475540db6b49928e512078accfd8ba91608146d14a13d (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationIsmFactory on arbitrumsepolia
+Pending 0xa14f63e984a14b488228657abe77fbe044f8973441cce8219d7614265494408f (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationHookFactory on arbitrumsepolia
+Pending 0x694fa2cc92c2e41e79d785a1158413b0004440215cb5aab45666bf9477dff0b2 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy routingIsmFactory on arbitrumsepolia
+Pending 0xc4bbc1949196a0c15abea85835afbe013d6ad33ad5ff6c84cc0a5c5cc909bd72 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying to spicy from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy merkleRootMultisigIsmFactory on spicy
+Pending 0xa93dc9320da11688dce5511d196221ea89142d283a2259cf4104e64cdada6042 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy messageIdMultisigIsmFactory on spicy
+Pending 0x5e8817a7f6edf13940b1e80817bc1d7ebdb76e06e1774c6efd581e8d24f8ef3d (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationIsmFactory on spicy
+Pending 0xf98a89bf985153b260ec559f0aa202760bd0a8ae677f0c9cb63cfb8f9b1e4aea (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationHookFactory on spicy
+Pending 0xd16c5c71a3ff424fc2f2bdc7cd0dcad0f0239ba42a8015f801b4f541fefd2bb4 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy routingIsmFactory on spicy
+Pending 0x47abe14edee7cdda3b89e6836ac1b7657bc6b39bc1c096944f12aa0db4fccfe7 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+ISM factory contracts deployed
+Deploying core contracts to sepolia, alfajores, basesepolia, arbitrumsepolia, spicy
+Start deploy to sepolia,alfajores,basesepolia,arbitrumsepolia,spicy
+Deploying to sepolia from https://sepolia.etherscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered proxyAdmin on sepolia 0x97Bbc6bBaFa5Ce3b2FA966c121Af63bD09e940f8
+Recovered mailbox on sepolia 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766
+Deploying default ISM
+Deploying domainRoutingIsm to sepolia 
+Deploying staticAggregationIsm to sepolia (for verifying alfajores)
+Deploying messageIdMultisigIsm to sepolia (for verifying alfajores)
+Recovered 2 of 3 address set on sepolia
+Deploying merkleRootMultisigIsm to sepolia (for verifying alfajores)
+Recovered 2 of 3 address set on sepolia
+Recovered 1 of 2 address set on sepolia
+Deploying staticAggregationIsm to sepolia (for verifying basesepolia)
+Deploying messageIdMultisigIsm to sepolia (for verifying basesepolia)
+Recovered 1 of 1 address set on sepolia
+Deploying merkleRootMultisigIsm to sepolia (for verifying basesepolia)
+Recovered 1 of 1 address set on sepolia
+Recovered 1 of 2 address set on sepolia
+Deploying staticAggregationIsm to sepolia (for verifying arbitrumsepolia)
+Deploying messageIdMultisigIsm to sepolia (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on sepolia
+Deploying merkleRootMultisigIsm to sepolia (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on sepolia
+Recovered 1 of 2 address set on sepolia
+Deploying staticAggregationIsm to sepolia (for verifying spicy)
+Deploying messageIdMultisigIsm to sepolia (for verifying spicy)
+Recovered 1 of 1 address set on sepolia
+Deploying merkleRootMultisigIsm to sepolia (for verifying spicy)
+Recovered 1 of 1 address set on sepolia
+Recovered 1 of 2 address set on sepolia
+Pending https://sepolia.etherscan.io/tx/0x1dc8aae4f06d05902c28e9b74f321c79f22f4ca29dafdc0d9ab6b36559895d69 (waiting 1 blocks for confirmation)
+Deploying default hook
+Recovered merkleTreeHook on sepolia 0x4917a9746A7B6E0A57159cCb7F5a6744247f2d0d
+Deploying required hook
+Deploying ProtocolFeeHook for sepolia
+Recovered protocolFee on sepolia 0x13AC3349Cb159fE86A22cf42DdA803D9f7309DB5
+Initializing mailbox
+Error from provider #0. Triggering next provider.
+Error from provider #1. Triggering next provider.
+Error from provider #2.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x03edafab32"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000d4a4219c4b69c8d3cfbca3ae88da0fabe41fad8b0000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0. Triggering next provider.
+Error from provider #1. Triggering next provider.
+Error from provider #2.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x03edafab32"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000d4a4219c4b69c8d3cfbca3ae88da0fabe41fad8b0000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0. Triggering next provider.
+Error from provider #1. Triggering next provider.
+Error from provider #2.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x03edafab32"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000d4a4219c4b69c8d3cfbca3ae88da0fabe41fad8b0000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Mailbox already initialized
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Recovered validatorAnnounce on sepolia 0xE6105C59480a1B7DD3E4f28153aFdbE12F4CfCD9
+Deploy testRecipient on sepolia
+Pending https://sepolia.etherscan.io/tx/0x6e1acf009af09515cf5bcc486ac4d05b2ee9f486c085c8c383c7b5527f5cbd46 (waiting 1 blocks for confirmation)
+Verification failed. [object Object]
+Error checking if contract is already verified: Error: [sepolia] Verification failed. [object Object]
+Verifying implementation at 0x3f014140D810C522A4a67B2d6AbDe822370a839e
+Verification failed. Max rate limit reached, please use API Key for higher rate limit
+Error verifying contract: Error: [sepolia] Verification failed. Max rate limit reached, please use API Key for higher rate limit
+Checking ISM sepolia
+Found ISM for on sepolia: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0xd4A4219C4b69c8d3CFBcA3ae88dA0fAbe41faD8b
+Pending https://sepolia.etherscan.io/tx/0x7fa33cf41b962c72db9c1096d0feeb640951c2df1ce2a0cdffeeccbb8c44065d (waiting 1 blocks for confirmation)
+Transferring ownership of mailbox to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Transferring ownership of proxyAdmin to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Transferring ownership of validatorAnnounce to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Deploying to alfajores from https://alfajores.celoscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered proxyAdmin on alfajores 0x4eDBf5846D973c53AF478cf62aB5bC92807521e3
+Recovered mailbox on alfajores 0xEf9F292fcEBC3848bF4bB92a96a04F9ECBb78E59
+Deploying default ISM
+Deploying domainRoutingIsm to alfajores 
+Deploying staticAggregationIsm to alfajores (for verifying sepolia)
+Deploying messageIdMultisigIsm to alfajores (for verifying sepolia)
+Recovered 2 of 3 address set on alfajores
+Deploying merkleRootMultisigIsm to alfajores (for verifying sepolia)
+Recovered 2 of 3 address set on alfajores
+Recovered 1 of 2 address set on alfajores
+Deploying staticAggregationIsm to alfajores (for verifying basesepolia)
+Deploying messageIdMultisigIsm to alfajores (for verifying basesepolia)
+Deploying new 1 of 1 address set to alfajores
+Pending https://alfajores.celoscan.io/tx/0x31a825b3ba250336e5d3a36ab0886f589276de1e4ae4f415fe1243df4e2afb36 (waiting 1 blocks for confirmation)
+Deploying merkleRootMultisigIsm to alfajores (for verifying basesepolia)
+Deploying new 1 of 1 address set to alfajores
+Pending https://alfajores.celoscan.io/tx/0x9c04a2a77b6181a19192cc0083fb3c96dd151b9a7b702b7cb41c5617d5da1e42 (waiting 1 blocks for confirmation)
+Deploying new 1 of 2 address set to alfajores
+Pending https://alfajores.celoscan.io/tx/0x6874b13aa853f1fbb3d6197b888eaab6df824a5add47a5b74bc5b0e3456d0fce (waiting 1 blocks for confirmation)
+Deploying staticAggregationIsm to alfajores (for verifying arbitrumsepolia)
+Deploying messageIdMultisigIsm to alfajores (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on alfajores
+Deploying merkleRootMultisigIsm to alfajores (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on alfajores
+Recovered 1 of 2 address set on alfajores
+Deploying staticAggregationIsm to alfajores (for verifying spicy)
+Deploying messageIdMultisigIsm to alfajores (for verifying spicy)
+Recovered 1 of 1 address set on alfajores
+Deploying merkleRootMultisigIsm to alfajores (for verifying spicy)
+Recovered 1 of 1 address set on alfajores
+Recovered 1 of 2 address set on alfajores
+Pending https://alfajores.celoscan.io/tx/0xa8358e41f2f0a23fab08e1f9217574ef8618718259525b3383cac8b1caa598f1 (waiting 1 blocks for confirmation)
+Deploying default hook
+Recovered merkleTreeHook on alfajores 0x221FA9CBaFcd6c1C3d206571Cf4427703e023FFa
+Deploying required hook
+Deploying ProtocolFeeHook for alfajores
+Recovered protocolFee on alfajores 0xC9D50584F08Bf6cCD1004d14c7062044b45E3b48
+Initializing mailbox
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x02ad741300"
+    },
+    "to": "0xEf9F292fcEBC3848bF4bB92a96a04F9ECBb78E59",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f0000000000000000000000007883dd1e977eaf82b4ef5e9a7ddd4fc496e810ca000000000000000000000000221fa9cbafcd6c1c3d206571cf4427703e023ffa000000000000000000000000c9d50584f08bf6ccd1004d14c7062044b45e3b48",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x02ad741300"
+    },
+    "to": "0xEf9F292fcEBC3848bF4bB92a96a04F9ECBb78E59",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f0000000000000000000000007883dd1e977eaf82b4ef5e9a7ddd4fc496e810ca000000000000000000000000221fa9cbafcd6c1c3d206571cf4427703e023ffa000000000000000000000000c9d50584f08bf6ccd1004d14c7062044b45e3b48",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x02ad741300"
+    },
+    "to": "0xEf9F292fcEBC3848bF4bB92a96a04F9ECBb78E59",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f0000000000000000000000007883dd1e977eaf82b4ef5e9a7ddd4fc496e810ca000000000000000000000000221fa9cbafcd6c1c3d206571cf4427703e023ffa000000000000000000000000c9d50584f08bf6ccd1004d14c7062044b45e3b48",
+    "type": 2,
+    "accessList": null
+  }
+}
+Mailbox already initialized
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Recovered validatorAnnounce on alfajores 0x3726EE36a2A9e11a40d1ffD7D9A1A16e0154cDA0
+Deploy testRecipient on alfajores
+Pending https://alfajores.celoscan.io/tx/0xd80384832fa3bc938257c2f85108167f92da35e0f24a508576a32a9ddc8ab07f (waiting 1 blocks for confirmation)
+Verifying implementation at 0x2DBEB34648D98a337e6E39865A6b975a83975DD9
+Verification failed. Missing or invalid ApiKey
+Error verifying contract: Error: [alfajores] Verification failed. Missing or invalid ApiKey
+Checking ISM alfajores
+Found ISM for on alfajores: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0x7883Dd1E977eaf82B4Ef5E9A7DDD4Fc496E810cA
+Pending https://alfajores.celoscan.io/tx/0x4b584c77c1eee56eb3361c1efc23261e1dd5e990e8af0a7702c69aba72fa96c3 (waiting 1 blocks for confirmation)
+Transferring ownership of mailbox to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on alfajores
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Transferring ownership of proxyAdmin to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on alfajores
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Transferring ownership of validatorAnnounce to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on alfajores
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Deploying to basesepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered proxyAdmin on basesepolia 0x0Da9af4c077A093bA39E252eF3fb87eA05d942f2
+Recovered mailbox on basesepolia 0x3f014140D810C522A4a67B2d6AbDe822370a839e
+Deploying default ISM
+Deploying domainRoutingIsm to basesepolia 
+Deploying staticAggregationIsm to basesepolia (for verifying alfajores)
+Deploying messageIdMultisigIsm to basesepolia (for verifying alfajores)
+Deploying new 2 of 3 address set to basesepolia
+Pending 0x1ea97311dd25feda8e4fa2f8b12d16996971ef8f5b25bd92f46396dcf18d4a6d (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to basesepolia (for verifying alfajores)
+Deploying new 2 of 3 address set to basesepolia
+Pending 0x9c23ccba68310ef492ca2fb4199834fa3c0a3e7a38547ebfe4d2d4b6ccb5bde0 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to basesepolia
+Pending 0xfd0e9c360652e7dc72eb41d4e475c565d87a1f4c132ae6e04fafdae9ef3bd7cf (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to basesepolia (for verifying sepolia)
+Deploying messageIdMultisigIsm to basesepolia (for verifying sepolia)
+Recovered 2 of 3 address set on basesepolia
+Deploying merkleRootMultisigIsm to basesepolia (for verifying sepolia)
+Recovered 2 of 3 address set on basesepolia
+Recovered 1 of 2 address set on basesepolia
+Deploying staticAggregationIsm to basesepolia (for verifying arbitrumsepolia)
+Deploying messageIdMultisigIsm to basesepolia (for verifying arbitrumsepolia)
+Deploying new 1 of 1 address set to basesepolia
+Pending 0xc184cc760627d8b608658f82f19efa7e17d036d33ef6146772cca0d85b030e31 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to basesepolia (for verifying arbitrumsepolia)
+Deploying new 1 of 1 address set to basesepolia
+Pending 0xe59c2159059dfb64f15e9ed145717eab570c88a2365631bb08bf77c4f33060ac (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to basesepolia
+Pending 0x6150abf72472568e9540ddee411bfafe953ab7a14f070d80caccf26322e9b7a3 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to basesepolia (for verifying spicy)
+Deploying messageIdMultisigIsm to basesepolia (for verifying spicy)
+Recovered 1 of 1 address set on basesepolia
+Deploying merkleRootMultisigIsm to basesepolia (for verifying spicy)
+Recovered 1 of 1 address set on basesepolia
+Recovered 1 of 2 address set on basesepolia
+Pending 0xa529c2e5adc608ce8d0b7b18bafd761c7f1a0df7b100542c4543c18ade1299eb (waiting 2 blocks for confirmation)
+Deploying default hook
+Recovered merkleTreeHook on basesepolia 0x251047Ff9100a7bb49994C4a3748bd085D117b8f
+Deploying required hook
+Deploying ProtocolFeeHook for basesepolia
+Recovered protocolFee on basesepolia 0x210d4B8350aADd4A0F5670F283D7259A4d540461
+Initializing mailbox
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x5f60aa46"
+    },
+    "to": "0x3f014140D810C522A4a67B2d6AbDe822370a839e",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f00000000000000000000000010c9d53088a07734ed73db5014c63541a5864916000000000000000000000000251047ff9100a7bb49994c4a3748bd085d117b8f000000000000000000000000210d4b8350aadd4a0f5670f283d7259a4d540461",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x5f60aa46"
+    },
+    "to": "0x3f014140D810C522A4a67B2d6AbDe822370a839e",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f00000000000000000000000010c9d53088a07734ed73db5014c63541a5864916000000000000000000000000251047ff9100a7bb49994c4a3748bd085d117b8f000000000000000000000000210d4b8350aadd4a0f5670f283d7259a4d540461",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x5f60aa46"
+    },
+    "to": "0x3f014140D810C522A4a67B2d6AbDe822370a839e",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f00000000000000000000000010c9d53088a07734ed73db5014c63541a5864916000000000000000000000000251047ff9100a7bb49994c4a3748bd085d117b8f000000000000000000000000210d4b8350aadd4a0f5670f283d7259a4d540461",
+    "type": 2,
+    "accessList": null
+  }
+}
+Mailbox already initialized
+Set ISM on basesepolia with address 0x10C9d53088A07734ed73db5014c63541A5864916
+Sent tx 0x5743c3114218fb321d772db0a00c60f9740d98f3172a4bd1def555553c4a9f55
+Pending 0x5743c3114218fb321d772db0a00c60f9740d98f3172a4bd1def555553c4a9f55 (waiting 2 blocks for confirmation)
+Recovered validatorAnnounce on basesepolia 0x3083d33799B53c7eF14ad12399509f82e1864910
+Deploy testRecipient on basesepolia
+Pending 0xf6b7f7945cbc04972040769b30dd96ed2b150c2a5b930863b0f8a189bc7c11c3 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Checking ISM basesepolia
+Found ISM for on basesepolia: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0x10C9d53088A07734ed73db5014c63541A5864916
+Pending 0x6f6465fdbd382891833517851852a4f12e0cb6bc07999f0ea187c00b22bc7ab4 (waiting 2 blocks for confirmation)
+Deploying to arbitrumsepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy proxyAdmin on arbitrumsepolia
+Pending 0xbbec454ecfe67c6569a1e07fcce09c47db33a1e3f876c2e9fa31f76ae54d6477 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy mailbox on arbitrumsepolia
+Pending 0x2222cd1f70bd26062e572400c7e61aa04bf4fb5e374769562d798d972051a280 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy TransparentUpgradeableProxy on arbitrumsepolia
+Pending 0x48444fb60b2a94b9c2e706c58e19691744aab0c743e8d134561baa1e551e1dc2 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying default ISM
+Deploying domainRoutingIsm to arbitrumsepolia 
+Deploying staticAggregationIsm to arbitrumsepolia (for verifying alfajores)
+Deploying messageIdMultisigIsm to arbitrumsepolia (for verifying alfajores)
+Deploying new 2 of 3 address set to arbitrumsepolia
+Pending 0xa4f0105c32d03578581cb65605d133e1cac1b271c2a33e53204359514385224f (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to arbitrumsepolia (for verifying alfajores)
+Deploying new 2 of 3 address set to arbitrumsepolia
+Pending 0x7dbca35cae92e36569ac7d3fdaa60f3982fe77cb1c93857ee463983567b4fff4 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to arbitrumsepolia
+Pending 0x6cb1958abdd0fc05a605e9afd502f50751c837671049bedeab70e27d3b185872 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to arbitrumsepolia (for verifying sepolia)
+Deploying messageIdMultisigIsm to arbitrumsepolia (for verifying sepolia)
+Deploying new 2 of 3 address set to arbitrumsepolia
+Pending 0xd4d9b8e2efed234aa90a661f9512be26c268578c2db469d23f6033afdeddd0f1 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to arbitrumsepolia (for verifying sepolia)
+Deploying new 2 of 3 address set to arbitrumsepolia
+Pending 0xd83eff53c59e109d1a9a307dbf6d40e2608d96dbde36429cae85d90577203946 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to arbitrumsepolia
+Pending 0xfa922b7b23d842aafb0894c9e84c1b372c03da267732677e87d1cfb13ae04152 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to arbitrumsepolia (for verifying basesepolia)
+Deploying messageIdMultisigIsm to arbitrumsepolia (for verifying basesepolia)
+Deploying new 1 of 1 address set to arbitrumsepolia
+Pending 0x8bf65c7cbf845ffb26831dfee4d26944be9de4b237ee2ee76c68213e52239ae5 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to arbitrumsepolia (for verifying basesepolia)
+Deploying new 1 of 1 address set to arbitrumsepolia
+Pending 0x831c6e8e41e08e2f739ef0ad6a00800b1cb3e229d2ead530cdbc4dc831cb0d9a (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to arbitrumsepolia
+Pending 0x16179dc761117a0d6c04a1fa760c21e2ff7f43792392b6bfa48d5b5e615baad9 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to arbitrumsepolia (for verifying spicy)
+Deploying messageIdMultisigIsm to arbitrumsepolia (for verifying spicy)
+Recovered 1 of 1 address set on arbitrumsepolia
+Deploying merkleRootMultisigIsm to arbitrumsepolia (for verifying spicy)
+Recovered 1 of 1 address set on arbitrumsepolia
+Recovered 1 of 2 address set on arbitrumsepolia
+Pending 0x7036509485cdefbdf5e28c2e353ce379b3023a5f545fe8a60bcae6c54e5c6efc (waiting 2 blocks for confirmation)
+Deploying default hook
+Deploy merkleTreeHook on arbitrumsepolia
+Pending 0xcfbf9f6003ff3dfc9930dd76bcb20879206ac1962b5aa142c0373585ef972005 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying required hook
+Deploying ProtocolFeeHook for arbitrumsepolia
+Deploy protocolFee on arbitrumsepolia
+Pending 0xb0746c5ef1f489fe738f0b2b179567f5dc3cf1e42f86696cd41fb06f6f10b6a5 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Initializing mailbox
+Pending 0x5d0205d38d6569dfa84827d7424bcf008c7ffbbf19375ec903f8892e85d2b8bb (waiting 2 blocks for confirmation)
+Deploy validatorAnnounce on arbitrumsepolia
+Pending 0x64a9dbbde175174007e6c86f98cf569716d3a924106c1bd995389b1fc80bcb58 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy testRecipient on arbitrumsepolia
+Pending 0x31421a60510045498e2d251a665811a9e6f25277fd3e9fc99ccfe7c8788a74e9 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Checking ISM arbitrumsepolia
+Found ISM for on arbitrumsepolia: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0x2866B03E249C2717960ceb09462f3AC2e2Dd33a4
+Pending 0xc68d254737dd7e2cf32523af7f5af3cd2bbd5e89033b53d22037971af5f234ad (waiting 2 blocks for confirmation)
+Deploying to spicy from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy proxyAdmin on spicy
+Pending 0x85f3dcfa0f7d44fb41525e2221921d075d8298cfd1e9eb711394259ce295527a (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy mailbox on spicy
+Pending 0xb000c5cadf4bb27bb18bf94dad9635ce13409a853fd529bca576087c52d5f830 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy TransparentUpgradeableProxy on spicy
+Pending 0x07a6060b30f96b68e59f20d42b45306a5ea05433d6229f05d22b7e93c237f278 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying default ISM
+Deploying domainRoutingIsm to spicy 
+Deploying staticAggregationIsm to spicy (for verifying alfajores)
+Deploying messageIdMultisigIsm to spicy (for verifying alfajores)
+Deploying new 2 of 3 address set to spicy
+Pending 0x1cf5d267688a94182a37019384a859fb790c6d8bbacbeb50e5918551a7956713 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to spicy (for verifying alfajores)
+Deploying new 2 of 3 address set to spicy
+Pending 0x61ae73977bbc4cd3422deff8e48b0d3190f7feb46cf56854e5fb73f073ca6797 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to spicy
+Pending 0x8418c5de09804a444403f8b4b32a98cc0a6105e0064bca5f19ce676be5e32f56 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to spicy (for verifying sepolia)
+Deploying messageIdMultisigIsm to spicy (for verifying sepolia)
+Deploying new 2 of 3 address set to spicy
+Pending 0x3d3f98b63e8314feb16ce0963c53e5e32f8a91c8ca25788b228f0a18e4863ed3 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to spicy (for verifying sepolia)
+Deploying new 2 of 3 address set to spicy
+Pending 0xb1523c2d5d8ae823c13d8c42c425600bd6f7152001d7525ad3d33af8e6454c49 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to spicy
+Pending 0xe0784a4858a229c0eafbba4313761eddb96a80fdaf39bbb2dda75e24520f1fa3 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to spicy (for verifying basesepolia)
+Deploying messageIdMultisigIsm to spicy (for verifying basesepolia)
+Deploying new 1 of 1 address set to spicy
+Pending 0xd7620ab9129f5ca09d2f8212d5fa898b5fd1f00e8053ed9d14481111a8ddb070 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to spicy (for verifying basesepolia)
+Deploying new 1 of 1 address set to spicy
+Pending 0x40f63c2413dcc5148d868961a315b0404d18f401c273a877aac8fb41b2eae760 (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to spicy
+Pending 0xec1c7efdfca71f8633fb040c62461150e7816e251785e354c61a9f1b9b82d9a3 (waiting 2 blocks for confirmation)
+Deploying staticAggregationIsm to spicy (for verifying arbitrumsepolia)
+Deploying messageIdMultisigIsm to spicy (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on spicy
+Deploying merkleRootMultisigIsm to spicy (for verifying arbitrumsepolia)
+Recovered 1 of 1 address set on spicy
+Recovered 1 of 2 address set on spicy
+Pending 0x3a85c242311d3b77d90e3cab8126389659b43dff9a10b780522c44bdfa3a6b9b (waiting 2 blocks for confirmation)
+Deploying default hook
+Deploy merkleTreeHook on spicy
+Pending 0xe3c34263b86b265bfae789531d357a05ac30bc9c37852371ecd6ace8b0d2793b (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying required hook
+Deploying ProtocolFeeHook for spicy
+Deploy protocolFee on spicy
+Pending 0xd01fe25130706234fc32e43448785cb2c4ecebc64d076c0735e440310b6e82ec (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Initializing mailbox
+Pending 0xba5a12a55fb57ad76aef80369ea376bf0dd551587446c474e722a09e1d8919f8 (waiting 2 blocks for confirmation)
+Deploy validatorAnnounce on spicy
+Pending 0xd2958e09d90a4cdeaa10b9f52655eb38d12f3d590632a85336dcbbe0df9c7584 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy testRecipient on spicy
+Pending 0x2eda1b14664efef64050d0daea2254d8e4137b87b18b2dccae79239d1e0cd76f (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Checking ISM spicy
+Found ISM for on spicy: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0x2866B03E249C2717960ceb09462f3AC2e2Dd33a4
+Pending 0x88626ecaee6eccbaab600871ea78b2b22757e7eca92ef44e3ec60f904cb24da2 (waiting 2 blocks for confirmation)
+Core contracts deployed
+Writing agent configs
+Slow response from provider #0. Triggering next provider.
+Slow response from provider #1. Triggering next provider.
+Slow response from provider #2.
+Agent configs written
+Deployment is complete!
+Contract address artifacts are in artifacts/core-deployment-2024-03-16-11-51-57.json
+Agent configs are in artifacts/agent-config-2024-03-16-11-51-57.json
+
+osx@MacBook-Pro-106 hyperlane % 
