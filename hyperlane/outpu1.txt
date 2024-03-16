@@ -1,0 +1,210 @@
+osx@MacBook-Pro-106 hyperlane % hyperlane deploy core --targets sepolia,basesepolia --chains chains.yaml  --ism ism.yaml  --key 0x7e721b34f78b0f4234bf3cd62f50766869b6e70ac7e2df777a3e11c53b75ac43
+
+Hyperlane CLI
+Hyperlane permissionless core deployment
+----------------------------------------
+Reading file configs in chains.yaml
+All chain configs in chains.yaml are valid
+
+Deployments can be totally new or can use some existing contract addresses.
+? Do you want use some existing contract addresses? no
+All multisig configs in ism.yaml are valid
+Found configs for chains: sepolia, basesepolia
+
+Deployment plan
+===============
+Transaction signer and owner of new contracts will be 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploying to sepolia, basesepolia
+There are several contracts required for each chain but contracts in the Hyperlane SDK will be skipped
+? Is this deployment plan correct? yes
+Running pre-flight checks...
+Chains are valid ✅
+Signer is valid ✅
+Slow response from provider #0.
+Balances are sufficient ✅
+All systems ready, captain! Beginning deployment...
+Contract addresses will be written to artifacts/core-deployment-2024-03-16-11-23-25.json
+Agent configs will be written to artifacts/agent-config-2024-03-16-11-23-25.json
+Deploying ISM factory contracts
+Start deploy to sepolia,basesepolia
+Deploying to sepolia from https://sepolia.etherscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered merkleRootMultisigIsmFactory on sepolia 0x0a71AcC99967829eE305a285750017C4916Ca269
+Recovered messageIdMultisigIsmFactory on sepolia 0xFEb9585b2f948c1eD74034205a7439261a9d27DD
+Recovered aggregationIsmFactory on sepolia 0xC83e12EF2627ACE445C298e6eC418684918a6002
+Slow response from provider #0.
+Recovered aggregationHookFactory on sepolia 0x160C28C92cA453570aD7C031972b58d5Dd128F72
+Recovered routingIsmFactory on sepolia 0x3F100cBBE5FD5466BdB4B3a15Ac226957e7965Ad
+Slow response from provider #0.
+Deploying to basesepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy merkleRootMultisigIsmFactory on basesepolia
+Pending 0x868ef14efd330c0afc4ea30d9c6fc34d4c944faae869b85b1941cf2703d608a0 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy messageIdMultisigIsmFactory on basesepolia
+Pending 0xff870ec397e25ac3df63a2356766ccd3fcb3c5f508d692f9961a35e3aee58b66 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationIsmFactory on basesepolia
+Pending 0x4c7deacd6dab4eb45602a2d38607af2d6bde197750f989cd63400c4eb663c9a8 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy aggregationHookFactory on basesepolia
+Pending 0xb6b63e8991cd27f4ebc9cd700359f49fc3f5c2684ced0fde2135381697150a27 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy routingIsmFactory on basesepolia
+Pending 0xaafca03e0e311fd1b5d74bb6e1b0aab5147467cd0fd9d509c2709e625d23b6e5 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+ISM factory contracts deployed
+Deploying core contracts to sepolia, basesepolia
+Start deploy to sepolia,basesepolia
+Deploying to sepolia from https://sepolia.etherscan.io/address/0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Recovered proxyAdmin on sepolia 0x97Bbc6bBaFa5Ce3b2FA966c121Af63bD09e940f8
+Recovered mailbox on sepolia 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766
+Slow response from provider #0.
+Deploying default ISM
+Deploying domainRoutingIsm to sepolia 
+Deploying staticAggregationIsm to sepolia (for verifying basesepolia)
+Deploying messageIdMultisigIsm to sepolia (for verifying basesepolia)
+Slow response from provider #0.
+Deploying new 1 of 1 address set to sepolia
+Slow response from provider #0.
+Slow response from provider #0.
+Pending https://sepolia.etherscan.io/tx/0xd424e1c09292cb7b36c8128f5c54ee846b093222053225aa0511c4b9f145f114 (waiting 1 blocks for confirmation)
+Slow response from provider #0.
+Deploying merkleRootMultisigIsm to sepolia (for verifying basesepolia)
+Deploying new 1 of 1 address set to sepolia
+Slow response from provider #0.
+Pending https://sepolia.etherscan.io/tx/0x73554b8c4827ee9a1d8e0d7e59f9d9291e084ced75c10e8c66b919d74a68b571 (waiting 1 blocks for confirmation)
+Deploying new 1 of 2 address set to sepolia
+Pending https://sepolia.etherscan.io/tx/0xa43b248656a1424e6f08baf5fab0d6252fed78702244d1e2c0f8ed32f446937d (waiting 1 blocks for confirmation)
+Pending https://sepolia.etherscan.io/tx/0x0a90fbdd38c32ed87a8b5199faac786c17f0859e063c0fa6ad5c9f9114d8fe18 (waiting 1 blocks for confirmation)
+Deploying default hook
+Recovered merkleTreeHook on sepolia 0x4917a9746A7B6E0A57159cCb7F5a6744247f2d0d
+Deploying required hook
+Deploying ProtocolFeeHook for sepolia
+Recovered protocolFee on sepolia 0x13AC3349Cb159fE86A22cf42DdA803D9f7309DB5
+Initializing mailbox
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x06bfe7d350"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000b5d8015c4ff4a6f83215e2046b5bd787466f74d50000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x06bfe7d350"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000b5d8015c4ff4a6f83215e2046b5bd787466f74d50000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Error from provider #0.
+All providers failed for method estimateGas and params {
+  "transaction": {
+    "from": "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F",
+    "maxPriorityFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x59682f00"
+    },
+    "maxFeePerGas": {
+      "type": "BigNumber",
+      "hex": "0x06bfe7d350"
+    },
+    "to": "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766",
+    "data": "0xf8c8765e0000000000000000000000009ab015d2148049939228d26458162bdf5bf5ad8f000000000000000000000000b5d8015c4ff4a6f83215e2046b5bd787466f74d50000000000000000000000004917a9746a7b6e0a57159ccb7f5a6744247f2d0d00000000000000000000000013ac3349cb159fe86a22cf42dda803d9f7309db5",
+    "type": 2,
+    "accessList": null
+  }
+}
+Mailbox already initialized
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Slow response from provider #0.
+Slow response from provider #0.
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Recovered validatorAnnounce on sepolia 0xE6105C59480a1B7DD3E4f28153aFdbE12F4CfCD9
+Deploy testRecipient on sepolia
+Pending https://sepolia.etherscan.io/tx/0x48a36e58d9a051863e3b5004fdc6ba2c621e24e0814b121f44612246394eaa95 (waiting 1 blocks for confirmation)
+Verification failed. Max rate limit reached, please use API Key for higher rate limit
+Error checking if contract is already verified: Error: [sepolia] Verification failed. Max rate limit reached, please use API Key for higher rate limit
+Verifying implementation at 0x2DBEB34648D98a337e6E39865A6b975a83975DD9
+Verification failed. Missing or invalid ApiKey
+Error verifying contract: Error: [sepolia] Verification failed. Missing or invalid ApiKey
+Checking ISM sepolia
+Found ISM for on sepolia: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0xB5D8015c4FF4A6f83215e2046b5BD787466f74d5
+Pending https://sepolia.etherscan.io/tx/0x202d1f25e6063a0226aa6cf06a2e0fecc9f19a41ac091a5794115dee67f78dfd (waiting 1 blocks for confirmation)
+Transferring ownership of mailbox to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Transferring ownership of proxyAdmin to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Slow response from provider #0.
+Transferring ownership of validatorAnnounce to 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F on sepolia
+Signer (0x9Ab015d2148049939228d26458162bDF5Bf5AD8F) does not match owner (0xfaD1C94469700833717Fa8a3017278BC1cA8031C)
+Deploying to basesepolia from 0x9Ab015d2148049939228d26458162bDF5Bf5AD8F
+Deploy proxyAdmin on basesepolia
+Pending 0x64aaee2d115805ea32d68d96063662fad7a231e84ef1fda960e5fbe98239fcd5 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy mailbox on basesepolia
+Pending 0xe039f02140035ca7ab50a24e7c4410d70e968a80a665406ce6422f75eef0c65a (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy TransparentUpgradeableProxy on basesepolia
+Pending 0x4acff9fd84f8eb50361c7134e4a189dd879ce8aa0b8da2ff9b85f6f93ea05ab7 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying default ISM
+Deploying domainRoutingIsm to basesepolia 
+Deploying staticAggregationIsm to basesepolia (for verifying sepolia)
+Deploying messageIdMultisigIsm to basesepolia (for verifying sepolia)
+Deploying new 2 of 3 address set to basesepolia
+Pending 0x1c634c1ca066eb15ca517c5c5787533f2d323f5e5a303d482a9a30d1b5aafe88 (waiting 2 blocks for confirmation)
+Deploying merkleRootMultisigIsm to basesepolia (for verifying sepolia)
+Deploying new 2 of 3 address set to basesepolia
+Pending 0x2acaeeaa3adad8176f8b32b6d9bcf0541d8b84955901c68325da4325a0a0a9bb (waiting 2 blocks for confirmation)
+Deploying new 1 of 2 address set to basesepolia
+Pending 0x583479b84f827a60b4b177f11c6627af5ba9a53d05a0f0888f8a806a1b7563e4 (waiting 2 blocks for confirmation)
+Pending 0x7e7d7644abb7a08e98abef51d6980fbcd5df986714e3ce97276e1eaa44656980 (waiting 2 blocks for confirmation)
+Deploying default hook
+Deploy merkleTreeHook on basesepolia
+Pending 0xd3aaed00414e5c551f6e32c2e1051928dee2c1a81e6e4db5c7ba2ea94ef2aac2 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploying required hook
+Deploying ProtocolFeeHook for basesepolia
+Deploy protocolFee on basesepolia
+Pending 0x2d8cd3c5322eb9da0e1172c11a5bb96a54eef4e2434c1269730c7d9d2c5e873a (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Initializing mailbox
+Pending 0x413461d33ddad6fa1febb062a14d27d513e24de96d49852dc380ea00a7f3e0f0 (waiting 2 blocks for confirmation)
+Deploy validatorAnnounce on basesepolia
+Pending 0xafc9be1decce56f689ede597002d2e948b775f9bda62f711175ac52e38062e0e (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Deploy testRecipient on basesepolia
+Pending 0x9e5828e3f755ebf297e852f4718c9e2db40f329e9f8c98163de62d6663d1e856 (waiting 2 blocks for confirmation)
+No explorer API set, skipping
+Checking ISM basesepolia
+Found ISM for on basesepolia: 0x0000000000000000000000000000000000000000
+Current ISM does not match config. Updating to 0x2866B03E249C2717960ceb09462f3AC2e2Dd33a4
+Pending 0xf16ecca626a6e42525063568e8d62fe6dc4d6f977874831f45b929b432464250 (waiting 2 blocks for confirmation)
+Core contracts deployed
+Writing agent configs
+Agent configs written
+Deployment is complete!
+Contract address artifacts are in artifacts/core-deployment-2024-03-16-11-23-25.json
+Agent configs are in artifacts/agent-config-2024-03-16-11-23-25.json
