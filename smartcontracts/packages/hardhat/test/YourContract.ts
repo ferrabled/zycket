@@ -9,13 +9,13 @@ describe("Zycket", function () {
   before(async () => {
     const [owner] = await ethers.getSigners();
     const yourContractFactory = await ethers.getContractFactory("Zycket");
-    yourContract = (await yourContractFactory.connect(owner).deploy(owner.address)) as Zycket;
+    yourContract = (await yourContractFactory.connect(owner).deploy(owner.address, "")) as Zycket;
     await yourContract.waitForDeployment();
   });
 
   describe("Deployment", function () {
     it("Should have the right message on deploy", async function () {
-      const [owner, bob] = await ethers.getSigners();
+      const [owner] = await ethers.getSigners();
       expect(await yourContract.balanceOf(owner.address)).to.equal(0);
       await yourContract.safeMint(owner.address)
       expect(await yourContract.balanceOf(owner.address)).to.equal(1);
