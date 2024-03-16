@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import Main from "@/components/biconomy/main";
 
 export default function Home() {
   return (
