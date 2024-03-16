@@ -24,6 +24,10 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 import { evmNetworks } from "@/components/dynamic/evm-networks";
 import Main from "@/components/biconomy/main";
+import SendTransaction from "@/components/biconomy/transaction";
+import { set } from "date-fns";
+import { Transaction2 } from "@/components/biconomy/transaction2";
+import { Button } from "@/components/ui/button";
 
 export default function RootLayout({
   children,
@@ -33,6 +37,7 @@ export default function RootLayout({
   const [provider, setProvider] = useState<any>(null);
   const [signer, setSigner] = useState<any>(null);
   const [smartAccount, setSmartAccount] = useState<any>(null);
+  const [smartAddress, setSmartAddress] = useState<any>(null);
 
   useEffect(() => {
     const createAndSetSmartAccount = async () => {
@@ -50,6 +55,7 @@ export default function RootLayout({
     const getBalanceAndAddress = async () => {
       if (smartAccount) {
         const address = await smartAccount.getAccountAddress();
+        setSmartAddress(address);
         const cfAddress = await smartAccount.getCounterFactualAddress();
         console.log("address", address);
         console.log("cfaddress", cfAddress);
@@ -72,6 +78,17 @@ export default function RootLayout({
         >
           <DynamicWagmiConnector>
             <DynamicWidget />
+            <SendTransaction />
+            {smartAccount && (
+              <div>
+                <h1>Smart Account</h1>
+                <p>Address: {smartAddress}</p>
+                <p>Balance: {smartAccount.balance}</p>
+              <Button onClick={() => Transaction2(smartAccount)}>Transaction2</Button>
+              </div>
+              
+
+            )}
             <Main
               provider={provider}
               setProvider={setProvider}
