@@ -15,7 +15,7 @@ export default function ZHeader() {
         <Button variant="ghost" onClick={() => router.push('/marketplace')}> Marketplace </Button>
         <Button variant="ghost" onClick={() => router.push('/dashboard')}> Profile </Button>
         <Button variant="ghost" onClick={() => router.push('/dashboard/organizer')}> Event Dashboard </Button>
-        <Button variant="default"> Create event </Button>
+        <Button variant="default" onClick={() => router.push('/event/new')}> Create event </Button>
       </nav>
     </header>
   );
