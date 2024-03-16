@@ -17,7 +17,7 @@ describe("Zycket", function () {
     it("Should have the right message on deploy", async function () {
       const [owner, bob] = await ethers.getSigners();
       expect(await yourContract.balanceOf(owner.address)).to.equal(0);
-      await yourContract.safeMint(owner.address, 1)
+      await yourContract.safeMint(owner.address)
       expect(await yourContract.balanceOf(owner.address)).to.equal(1);
     });
 

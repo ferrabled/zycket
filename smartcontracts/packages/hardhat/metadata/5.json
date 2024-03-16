@@ -1,0 +1,11 @@
+{
+  "name": "Flamego #5",
+  "description": "Flamego is a fire-breathing dragon with a volcanic background. It has glowing red eyes and a mystic smoke aura.",
+  "image": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/819.png",
+  "attributes": [
+    {
+      "trait_type": "Promoter",
+      "value": "Casas Bahia"
+    }
+  ]
+}
