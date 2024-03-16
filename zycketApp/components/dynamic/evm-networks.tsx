@@ -19,7 +19,7 @@ export const evmNetworks = [
       blockExplorerUrls: ['https://testnet.chiliscan.com/'],
       chainId: 88882,
       chainName: 'Chiliz Spicy Testnet',
-      iconUrls: ['https://app.dynamic.xyz/assets/networks/eth.svg'],
+      iconUrls: ['https://app.dynamic.xyz/assets/networks/chiliz.svg'],
       name: 'Chiliz',
       nativeCurrency: {
         decimals: 18,
