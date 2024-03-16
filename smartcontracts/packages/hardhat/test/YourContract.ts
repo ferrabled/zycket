@@ -21,5 +21,11 @@ describe("Zycket", function () {
       expect(await yourContract.balanceOf(owner.address)).to.equal(1);
       expect(await yourContract.tokenURI(0)).to.equal("teste");
     });
+    it("Should second mint have the same tokenUri", async function () {
+      const [owner, bob] = await ethers.getSigners();
+      await yourContract.safeMint(bob.address);
+      expect(await yourContract.balanceOf(bob.address)).to.equal(1);
+      expect(await yourContract.tokenURI(1)).to.equal("teste");
+    });
   });
 });
