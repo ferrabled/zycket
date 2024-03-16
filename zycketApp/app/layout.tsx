@@ -78,8 +78,8 @@ export default function RootLayout({
         >
           <DynamicWagmiConnector>
             <DynamicWidget />
-            <SendTransaction />
-            {smartAccount && (
+           {/* <SendTransaction />
+             {smartAccount && (
               <div>
                 <h1>Smart Account</h1>
                 <p>Address: {smartAddress}</p>
@@ -88,7 +88,7 @@ export default function RootLayout({
               </div>
               
 
-            )}
+            )} */}
             <Main
               provider={provider}
               setProvider={setProvider}
