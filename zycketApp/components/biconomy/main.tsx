@@ -1,10 +1,9 @@
-'use client'
 import { useEffect } from "react";
 import { useUserWallets } from "@dynamic-labs/sdk-react-core";
 
 import { ChainId } from "@biconomy/core-types";
 
-  const Main = ({ provider, setProvider, signer, setSigner }:any) => {
+const Main = ({ provider, setProvider, signer, setSigner }:any) => {
   const userWallets = useUserWallets();
 
   useEffect(() => {
@@ -14,14 +13,14 @@ import { ChainId } from "@biconomy/core-types";
           networkChainId: ChainId.CHILIZ_TESTNET,
         });
       }
-      //console.log(embeddedWallet.connector?.getPublicClient().then((res:any) => console.log(res)));
-      //TODO provider is being shown as undefined
-      const newProvider = await embeddedWallet.connector?.getPublicClient();
-      const newSigner = await embeddedWallet.connector?.ethers?.getSigner();
-      console.log("Provider")
-      console.log(newProvider);
+
+      const newProvider = embeddedWallet.connector.ethers?.getWeb3Provider();
+
+      const newSigner =  await embeddedWallet.connector.ethers?.getSigner();
+
       setProvider(newProvider);
       setSigner(newSigner);
+
       return;
     };
 

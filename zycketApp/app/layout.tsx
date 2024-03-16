@@ -30,29 +30,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [provider, setProvider] = useState<any>();
-  const [signer, setSigner] = useState<any>();
-  const [smartAccount, setSmartAccount] = useState<any>();
+  const [provider, setProvider] = useState<any>(null);
+  const [signer, setSigner] = useState<any>(null);
+  const [smartAccount, setSmartAccount] = useState<any>(null);
 
   useEffect(() => {
     const createAndSetSmartAccount = async () => {
-      const newSmartAccount = await createSmartAccount(provider, signer);
+      const newSmartAccount = await createSmartAccount(signer);
       setSmartAccount(newSmartAccount);
-      
-
     };
 
     if (provider && signer && !smartAccount) {
-      console.log("Create smart account")
+      console.log("creating smart account");
       createAndSetSmartAccount();
-      console.log("Smart account created")
-    }
-
-    if (smartAccount) {
-      console.log("Smart account: " + smartAccount)
-      console.log(smartAccount)
     }
   }, [provider, signer, smartAccount]);
+
+  useEffect(() => {
+    const getBalanceAndAddress = async () => {
+      if (smartAccount) {
+        const address = await smartAccount.getAccountAddress();
+        const cfAddress = await smartAccount.getCounterFactualAddress();
+        console.log("address", address);
+        console.log("cfaddress", cfAddress);
+      }
+    };
+
+    getBalanceAndAddress();
+  }, [smartAccount]);
 
   return (
     <html lang="en">
