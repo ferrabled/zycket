@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
@@ -88,7 +87,7 @@ contract MarketplaceNFT is ReentrancyGuard {
 
         uint256 tokenId = idToMarketItem[itemId].tokenId;
         bool sold = idToMarketItem[itemId].sold;
-        require(msg.value == price, "Submit exactly the asking price to purchase");
+        require(msg.value >= price, "Submit exactly the asking price to purchase");
         require(sold != true, "Sale already finished");
 
         idToMarketItem[itemId].seller.transfer(amountAfterFee);
@@ -132,5 +131,4 @@ contract MarketplaceNFT is ReentrancyGuard {
         require(_fee <= 50, "Fee <= 50");
         fee = _fee;        
     }
-
 }
