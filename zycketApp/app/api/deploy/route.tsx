@@ -18,7 +18,48 @@ export async function POST(req: Request, res: Response) {
     }
 
     const PRIVATE_KEY = process.env.PRIVATE_KEY ?? "";
-    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL, {
+    
+    //BASE
+    const BASEprovider = new ethers.JsonRpcProvider(process.env.BASE_RPC_URL, {
+      name: "Base Sepolia",
+      chainId: 84532,
+    });
+
+    const BASEwallet = new ethers.Wallet(PRIVATE_KEY, BASEprovider);
+    const BASEowner = BASEwallet.connect(BASEprovider);
+
+    const BASEcontractFactory = new ethers.ContractFactory(abi, bytecode, BASEwallet);
+    const BASEdeploy = await BASEcontractFactory.deploy(
+      BASEowner.getAddress(),
+      metadataUri
+    );
+
+    await BASEdeploy.waitForDeployment();
+    const BASEcontractAddress = await BASEdeploy.getAddress();
+    console.log("BASE Contract deployed to:", BASEcontractAddress);
+    
+    //SPICY
+    const SPICYprovider = new ethers.JsonRpcProvider(process.env.SPICY_RPC_URL, {
+      name: "Spicy Chiliz",
+      chainId: 88882,
+    });
+
+    const SPICYwallet = new ethers.Wallet(PRIVATE_KEY, SPICYprovider);
+    const SPICYowner = SPICYwallet.connect(SPICYprovider);
+
+    const SPICYcontractFactory = new ethers.ContractFactory(abi, bytecode, SPICYwallet);
+    const SPICYdeploy = await SPICYcontractFactory.deploy(
+      SPICYowner.getAddress(),
+      metadataUri
+    );
+
+    await SPICYdeploy.waitForDeployment();
+    const SPICYcontractAddress = await SPICYdeploy.getAddress();
+    console.log("SPICY Contract deployed to:", await SPICYdeploy.getAddress());
+
+
+    //ALFAJORES
+    const provider = new ethers.JsonRpcProvider(process.env.ALFAJORES_RPC_URL, {
       name: "alfajores",
       chainId: 44787,
     });
@@ -34,7 +75,7 @@ export async function POST(req: Request, res: Response) {
 
     await deploy.waitForDeployment();
     const contractAddress = await deploy.getAddress();
-    console.log("Contract deployed to:", await deploy.getAddress());
+    console.log("ALFAJORES Contract deployed to:", await deploy.getAddress());
 
     return new Response(JSON.stringify({ status: "Sucess", contractAddress }), {
       status: 200,
