@@ -37,3 +37,39 @@ Zycket is a blockchain-based NFT ticketing platform designed to address and solv
 ### Get all items
 ```http
 GET /api/items
+
+## Lessons Learned
+
+Throughout the development of Zycket, we've gained invaluable insights and faced numerous challenges that have pushed us to innovate and improve continuously. Key takeaways include:
+
+- **Blockchain Integration:** Mastering the intricacies of blockchain technology and its application in NFT ticketing was a steep learning curve. We overcame this by thorough research and experimenting with different blockchain platforms to find the optimal solution for our needs.
+- **User Experience:** Ensuring a seamless and intuitive user experience, especially for users unfamiliar with blockchain and NFTs, was paramount. We implemented user feedback loops early in the development process to refine our UI/UX continually.
+- **Scalability:** As demand for digital ticketing solutions grows, scalability became a focal point. We leveraged cloud services and optimized our smart contracts to handle increased load efficiently.
+
+These experiences have not only shaped Zycket into what it is today but have also prepared us for future challenges and opportunities.
+
+## License
+
+Zycket is made available under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+## Roadmap
+
+Future plans for Zycket include:
+
+- **Additional Browser Support:** Expanding compatibility to ensure Zycket is accessible on a wider range of web browsers.
+- **More Integrations with Blockchain Platforms:** To leverage the strengths of various blockchain technologies and enhance the functionality and reach of our ticketing platform.
+- **Enhancements in NFT Ticketing Features:** We're exploring new features to cater to a broader event category, including virtual events, conferences, and exclusive access events, making the ticketing experience more immersive and interactive.
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make to Zycket are **greatly appreciated**.
+
+**Contribution Guidelines:**
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please ensure to update tests as appropriate and adhere to Zycket's `code of conduct`.
