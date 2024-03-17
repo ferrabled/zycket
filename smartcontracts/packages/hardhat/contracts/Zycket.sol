@@ -3,28 +3,29 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 contract Zycket is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
+    string private _uri;
 
-    constructor(address initialOwner)
+    constructor(address initialOwner, string memory uri)
         ERC721("Zycket", "ZKT")
-        Ownable(initialOwner)
-    {}
+        Ownable()
+    {
+        _uri = uri;
+        transferOwnership(initialOwner);
+    }
 
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://ipfs.io/ipfs/Qmb1h2cmfqUk7L4LR3TdgQ6nwhR7pocMD8bU4DEE9caood/";
+    function _baseURI() internal view override returns (string memory) {
+        return _uri;
     }
     
-    function safeMint(address to, string memory uri) public onlyOwner {
+    function safeMint(address to) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
-        _setTokenURI(tokenId, uri);
     }
-
-    // The following functions are overrides required by Solidity.
 
     function tokenURI(uint256 tokenId)
         public
@@ -32,7 +33,7 @@ contract Zycket is ERC721, ERC721URIStorage, Ownable {
         override(ERC721, ERC721URIStorage)
         returns (string memory)
     {
-        return super.tokenURI(tokenId);
+        return _baseURI();
     }
 
     function supportsInterface(bytes4 interfaceId)
@@ -42,5 +43,9 @@ contract Zycket is ERC721, ERC721URIStorage, Ownable {
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
+    }
+
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
     }
 }
