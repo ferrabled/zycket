@@ -4,7 +4,7 @@ import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/com
 
 export default function MarketplaceComponent() {
   return (
-    <div key="2" className="min-h-screen bg-gray-100 p-8">
+    <div key="2" className="min-h-screen bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 p-8">
       <main>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-800">Marketplace</h2>

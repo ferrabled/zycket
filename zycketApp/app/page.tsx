@@ -47,7 +47,7 @@ export default function Component() {
 
 
   return (
-    <div key="1" className="min-h-screen bg-gray-100 p-8">
+    <div key="1" className="min-h-screen bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 p-8">
       <main>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-800">Events</h2>
