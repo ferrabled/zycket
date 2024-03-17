@@ -3,6 +3,9 @@
 import PrimaryButton from "@/components/Button";
 import { useEffect, useState } from "react";
 import { useWeb3 } from "@/contexts/useWeb3";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 export default function VerifyToken(){
 
     const {
@@ -41,17 +44,55 @@ export default function VerifyToken(){
     }
 
     return (
-        <div>
-            <h1>Buy Your Ticket</h1>
-            <div className="w-full px-3 mt-5 text-black">
-                <PrimaryButton
+<div key="2" className="min-h-screen bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 p-8">            
+<Card className="m-10">
+            <CardHeader>
+            <CardTitle>ETHLondon</CardTitle>
+            <CardDescription>Bringing developers onchain to build for the future of the internet.</CardDescription>
+            <CardDescription>91 Brick Ln, London E1 6QR.</CardDescription>
+            <CardDescription>800 tickets</CardDescription>
+            </CardHeader>
+            <CardContent className="mt-[-10px] flex flex-row gap-5">
+            <PrimaryButton
                     loading={nftLoading}
                     onClick={mintNFT}
                     title="Mint Minipay NFT"
                     widthFull
                 />
-            </div>
-
+            </CardContent>
+        </Card>
+        <Card className="m-10">
+        <CardHeader>
+          <CardTitle>Arsenal vs. Chelsea</CardTitle>
+          <CardDescription>League match between the leader and 3rd place.</CardDescription>
+          <CardDescription>Hornsey Rd, London N7 7AJ.</CardDescription>
+          <CardDescription>127000 tickets</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+        <PrimaryButton
+                    loading={nftLoading}
+                    onClick={mintNFT}
+                    title="Mint Minipay NFT"
+                    widthFull
+                />
+        </CardContent>
+      </Card>
+      <Card className="m-10">
+        <CardHeader>
+          <CardTitle>Techno Party</CardTitle>
+          <CardDescription>House & Techno Party All Night Long (East London).</CardDescription>
+          <CardDescription>Bow Bridge LDN.</CardDescription>
+          <CardDescription>125 tickets</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+        <PrimaryButton
+                    loading={nftLoading}
+                    onClick={mintNFT}
+                    title="Mint Minipay NFT"
+                    widthFull
+                />
+        </CardContent>
+      </Card>
         </div>
     )
 }
