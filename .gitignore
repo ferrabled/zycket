@@ -39,3 +39,4 @@ yarn-error.log*
 zycketApp/.env
 hyperlane/hyperlane-monorepo/.github
 hyperlane/.env
+hyperlane/.env
