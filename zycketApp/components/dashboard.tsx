@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useState } from "react";
+import SellModal from "./marketplace/sellModal";
 
 export default function DashboardComponent() {
   
+  const [show, setShow] = useState(false)
+
+
   function Event() {
     function sellItem() {
+      setShow(true)
       console.log('purchased');
     }
   
@@ -39,6 +45,7 @@ export default function DashboardComponent() {
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Thursday, March 14</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Event />
+              <SellModal show={show} setShow={setShow}/>
               <Card className="w-full">
                 <CardHeader>
                   <CardTitle>Manchester United vs. Liverpool</CardTitle>
