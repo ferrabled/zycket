@@ -1,0 +1,13 @@
+basesepolia:
+  threshold: 1
+  validators:
+    - "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F"
+arbitrumsepolia:
+  threshold: 1
+  validators:
+    - "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F"
+spicy:
+  threshold: 1
+  validators:
+    - "0x9Ab015d2148049939228d26458162bDF5Bf5AD8F"
+

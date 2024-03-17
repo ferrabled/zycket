@@ -1,0 +1,14 @@
+{
+  "value": {
+    "validator": "0x9ab015d2148049939228d26458162bdf5bf5ad8f",
+    "mailbox_address": "0x0000000000000000000000003f014140d810c522a4a67b2d6abde822370a839e",
+    "mailbox_domain": 84532,
+    "storage_location": "file:///Users/osx/Projects/ETHGlobal-London/zycket/hyperlane/signatures/hyperlane-validator-signatures-basesepolia"
+  },
+  "signature": {
+    "r": "0xb55e199128415a1eb9ccff2e2bb6cce60a5e55e5470ecaa4bde2416d2aaafd93",
+    "s": "0x53d31a4d984891e728d9ed386a54974f9c0423ad43cb3c4603d09c2790940ff7",
+    "v": 27
+  },
+  "serialized_signature": "0xb55e199128415a1eb9ccff2e2bb6cce60a5e55e5470ecaa4bde2416d2aaafd9353d31a4d984891e728d9ed386a54974f9c0423ad43cb3c4603d09c2790940ff71b"
+}
