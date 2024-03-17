@@ -33,12 +33,14 @@ export default function Component() {
       <Card className="w-full">
         <CardHeader>
           <CardTitle>ETHLondon</CardTitle>
-          <CardDescription>Emirates Stadium, London</CardDescription>
+          <CardDescription>Bringing developers onchain to build for the future of the internet.</CardDescription>
+          <CardDescription>91 Brick Ln, London E1 6QR.</CardDescription>
+          <CardDescription>800 tickets</CardDescription>
         </CardHeader>
-        <CardContent>
-          <p className="text-sm text-gray-600">93 Feet East</p>
-          <Button onClick={purchaseItem}>Purchase</Button>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button onClick={purchaseItem}>Purchase Ticket</Button>
           <Badge variant="secondary">+776</Badge>
+          <Badge variant="secondary">No requirements</Badge>
         </CardContent>
       </Card>
     )
@@ -61,72 +63,76 @@ export default function Component() {
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Sunday, March 17</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Event />
-            <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Arsenal vs. Chelsea</CardTitle>
-                  <CardDescription>Emirates Stadium, London</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">93 Feet East</p>
-                  <Button variant="ghost">Attendee</Button>
-                  <Badge variant="secondary">+776</Badge>
-                </CardContent>
-              </Card>
               <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Manchester United vs. Liverpool</CardTitle>
-                  <CardDescription>Old Trafford, Manchester</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Rich Mix</p>
-                  <Button variant="ghost">Attendee</Button>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Manchester City vs. Tottenham</CardTitle>
-                  <CardDescription>2b Worship St, Manchester</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="ghost">Attendee</Button>
-                  <Badge variant="secondary">+118</Badge>
-                </CardContent>
-              </Card>
+        <CardHeader>
+          <CardTitle>Arsenal vs. Chelsea</CardTitle>
+          <CardDescription>League match between the leader and 3rd place.</CardDescription>
+          <CardDescription>Hornsey Rd, London N7 7AJ.</CardDescription>
+          <CardDescription>127000 tickets</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button variant="outline" onClick={()=>console.log("Get more tokens")}>Purchase Ticket</Button>
+          <Badge variant="secondary">+15000</Badge>
+          <Badge variant="destructive">5 fan tokens needed</Badge>
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Saint Patrick's Day</CardTitle>
+          <CardDescription>Patron saint of Ireland (In London).</CardDescription>
+          <CardDescription>Trafalgar Square.</CardDescription>
+          <CardDescription>280 tickets</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button variant="outline" onClick={()=>console.log("Get more tokens")}>Purchase Ticket</Button>
+          <Badge variant="destructive">280</Badge>
+          <Badge variant="secondary">Member of Friends of Ireland Dao ✅</Badge>
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Techno Party</CardTitle>
+          <CardDescription>House & Techno Party All Night Long (East London).</CardDescription>
+          <CardDescription>Bow Bridge LDN.</CardDescription>
+          <CardDescription>125 tickets</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button variant="outline" onClick={()=>console.log("Get more tokens")}>Purchase Ticket</Button>
+          <Badge variant="secondary">+50</Badge>
+          <Badge variant="destructive">Member of Techno Dao</Badge>
+        </CardContent>
+      </Card>
             </div>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Monday, March 18</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Real Madrid vs. Barcelona</CardTitle>
-                  <CardDescription>Bernabeu Stadium, Madrid</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">10 York Rd</p>
-                  <Button variant="ghost">Attendee</Button>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Bayern Munich vs. RB Leipzig</CardTitle>
-                  <CardDescription>Allianz Arena, Munich</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="ghost">Attendee</Button>
-                  <Badge variant="secondary">+245</Badge>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>PSG vs. Marseille</CardTitle>
-                  <CardDescription>Parc des Princes, Paris</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="ghost">Attendee</Button>
-                  <Badge variant="secondary">+312</Badge>
-                </CardContent>
-              </Card>
+              <CardHeader>
+                <CardTitle>Bayern Munich vs. RB Leipzig</CardTitle>
+                <CardDescription>League match featuring some of the best teams.</CardDescription>
+                <CardDescription>Werner-Heisenberg-Allee 25, Munich E1 6QR.</CardDescription>
+                <CardDescription>8000 tickets</CardDescription>
+              </CardHeader>
+              <CardContent className="mt-[-10px] flex flex-row gap-5">
+                <Button onClick={()=>console.log("Get more tokens")}>Purchase Ticket</Button>
+                <Badge variant="secondary">+7500</Badge>
+                <Badge variant="secondary">2 Fan tokens ✅</Badge>
+              </CardContent>
+            </Card>
+            <Card className="w-full">
+              <CardHeader>
+                <CardTitle>Taylor Swift Concert</CardTitle>
+                <CardDescription>Bringing developers onchain to build for the future of the internet.</CardDescription>
+                <CardDescription>91 Brick Ln, London E1 6QR.</CardDescription>
+                <CardDescription>800 tickets</CardDescription>
+              </CardHeader>
+              <CardContent className="mt-[-10px] flex flex-row gap-5">
+                <Button onClick={()=>console.log("Get more tokens")}>Purchase Ticket</Button>
+                <Badge variant="secondary">+776</Badge>
+                <Badge variant="secondary">No requirements</Badge>
+              </CardContent>
+            </Card>
             </div>
           </div>
         </section>
