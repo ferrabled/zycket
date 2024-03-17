@@ -1,9 +1,50 @@
+'use client'
 import { Button } from "@/components/ui/button"
-import { AvatarImage, Avatar } from "@/components/ui/avatar"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+
+
 
 export default function Component() {
+  const { walletConnector } = useDynamicContext();
+  
+  function Event() {
+
+    function purchaseItem() {
+      walletConnector?.fetchPublicAddress().then((address) => {
+        console.log(address);
+        fetch("/api/mint", {
+          method: 'POST',
+          body: JSON.stringify({
+              collectionAddress: "0xb3AeE1B1d05D01c99cF96F070e19f3E12eA6fcE9",
+              sentToAddress: address,
+          })
+          })
+          .then(response => response.json())
+          console.log("purchased");
+      });
+      
+    
+    }
+  
+    return (
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>ETHLondon</CardTitle>
+          <CardDescription>Emirates Stadium, London</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-gray-600">93 Feet East</p>
+          <Button onClick={purchaseItem}>Purchase</Button>
+          <Badge variant="secondary">+776</Badge>
+        </CardContent>
+      </Card>
+    )
+  }
+
+
+
   return (
     <div key="1" className="min-h-screen bg-gray-100 p-8">
       <main>
@@ -18,7 +59,8 @@ export default function Component() {
           <div>
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Sunday, March 17</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="w-full">
+              <Event />
+            <Card className="w-full">
                 <CardHeader>
                   <CardTitle>Arsenal vs. Chelsea</CardTitle>
                   <CardDescription>Emirates Stadium, London</CardDescription>

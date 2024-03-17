@@ -26,7 +26,11 @@ export async function POST(req: Request, res: Response) {
     }
 
     const PRIVATE_KEY = process.env.PRIVATE_KEY ?? "";
-    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL, {
+      name: "alfajores",
+      chainId: 44787,
+    });
+    
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
     const owner = wallet.connect(provider);
 
