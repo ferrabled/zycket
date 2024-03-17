@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { AvatarImage, Avatar } from "@/components/ui/avatar"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
+import { Badge } from "./ui/badge"
 
 export default function MarketplaceComponent() {
   return (
@@ -18,39 +19,42 @@ export default function MarketplaceComponent() {
           <div>
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Search and Filter</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Arsenal vs. Chelsea</CardTitle>
-                  <CardDescription>Emirates Stadium, London</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Seat: 23A</p>
-                  <p className="text-sm text-gray-600">Price: $150</p>
-                  <Button variant="ghost">View Details</Button>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Manchester United vs. Liverpool</CardTitle>
-                  <CardDescription>Old Trafford, Manchester</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Seat: 15B</p>
-                  <p className="text-sm text-gray-600">Price: $120</p>
-                  <Button variant="ghost">View Details</Button>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Manchester City vs. Tottenham</CardTitle>
-                  <CardDescription>2b Worship St, Manchester</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Seat: 7C</p>
-                  <p className="text-sm text-gray-600">Price: $100</p>
-                  <Button variant="ghost">View Details</Button>
-                </CardContent>
-              </Card>
+            <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Saint Patrick's Day</CardTitle>
+          <CardDescription>Patron saint of Ireland (In London).</CardDescription>
+          <CardDescription>Trafalgar Square.</CardDescription>
+          <CardDescription>Seller: 0x12a...9fd</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button onClick={()=>console.log("Get more tokens")}>Purchase Ticket $12</Button>
+          <Badge variant="secondary">Member of Friends of Ireland Dao ✅</Badge>
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Saint Patrick's Day</CardTitle>
+          <CardDescription>Patron saint of Ireland (In London).</CardDescription>
+          <CardDescription>Trafalgar Square.</CardDescription>
+          <CardDescription>Seller: 0x12a...9fd</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button onClick={()=>console.log("Get more tokens")}>Purchase Ticket $20</Button>
+          <Badge variant="secondary">Member of Friends of Ireland Dao ✅</Badge>
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Saint Patrick's Day</CardTitle>
+          <CardDescription>Patron saint of Ireland (In London).</CardDescription>
+          <CardDescription>Trafalgar Square.</CardDescription>
+          <CardDescription>Seller: 0xa4a...90d</CardDescription>
+        </CardHeader>
+        <CardContent className="mt-[-10px] flex flex-row gap-5">
+          <Button onClick={()=>console.log("Get more tokens")}>Purchase Ticket $22</Button>
+          <Badge variant="secondary">Member of Friends of Ireland Dao ✅</Badge>
+        </CardContent>
+      </Card>
             </div>
           </div>
           <div>
@@ -61,21 +65,12 @@ export default function MarketplaceComponent() {
                   <CardTitle>Real Madrid vs. Barcelona</CardTitle>
                   <CardDescription>Bernabeu Stadium, Madrid</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Seat: 10A</p>
-                  <p className="text-sm text-gray-600">Price: $200</p>
-                  <Button variant="ghost">View Details</Button>
-                </CardContent>
-              </Card>
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Bayern Munich vs. RB Leipzig</CardTitle>
-                  <CardDescription>Allianz Arena, Munich</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">Seat: 5B</p>
-                  <p className="text-sm text-gray-600">Price: $180</p>
-                  <Button variant="ghost">View Details</Button>
+                <CardContent className="flex flex-row">
+                  <div className="mr-14">
+                  <p className="text-sm text-gray-600">Seat: 12C</p>
+                  <p className="text-sm text-gray-600">Price: $220</p>
+                  </div>
+                  <Button>View Details</Button>
                 </CardContent>
               </Card>
               <Card className="w-full">
@@ -83,10 +78,12 @@ export default function MarketplaceComponent() {
                   <CardTitle>PSG vs. Marseille</CardTitle>
                   <CardDescription>Parc des Princes, Paris</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex flex-row">
+                  <div className="mr-14">
                   <p className="text-sm text-gray-600">Seat: 12C</p>
                   <p className="text-sm text-gray-600">Price: $220</p>
-                  <Button variant="ghost">View Details</Button>
+                  </div>
+                  <Button>View Details</Button>
                 </CardContent>
               </Card>
             </div>
