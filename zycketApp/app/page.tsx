@@ -13,13 +13,14 @@ export default function Component() {
 
     function purchaseItem() {
       walletConnector?.fetchPublicAddress().then((address) => {
-        console.log(address);
+        console.log("Purchasing ticket " + address);
         fetch("/api/mint", {
           method: 'POST',
           body: JSON.stringify({
               BASEcollectionAddress: "0xEE4a35c10eD0108bB222D2b1527D070ca99333D5",
               SPICYcollectionAddress:"0x8A9CdD69cD6bAb61Cd3f2659874291cc0578C731",
               ALFAcollectionAddress:"0x17EfC4f95CDC4889A42911541ec9aFE3B2d6c74d",
+              ARBcollectionAddress:"0xEa7868387E5FC30BfD9C9a2806c9AdB187313FFc",
               sentToAddress: address,
           })
           })

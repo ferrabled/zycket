@@ -4,9 +4,9 @@ const abi = require("../../../contracts/abi.json").abi;
 
 export async function POST(req: Request, res: Response) {
   try {
-    const { BASEcollectionAddress, SPICYcollectionAddress, ALFAcollectionAddress, sentToAddress } = await req.json();
+    const { BASEcollectionAddress, SPICYcollectionAddress, ALFAcollectionAddress, ARBcollectionAddress, sentToAddress } = await req.json();
 
-    if (!BASEcollectionAddress || !SPICYcollectionAddress || !ALFAcollectionAddress) {
+    if (!BASEcollectionAddress || !SPICYcollectionAddress || !ALFAcollectionAddress || !ARBcollectionAddress) {
       return new Response(
         JSON.stringify({ message: "contractAddress is required" }),
         {
@@ -52,6 +52,17 @@ export async function POST(req: Request, res: Response) {
     const SPICYyourContract = new ethers.Contract(SPICYcollectionAddress, abi, SPICYowner);
     await SPICYyourContract.safeMint(sentToAddress);
 
+    //ARBITRUM SEPOLIA
+    const ARBprovider = new ethers.JsonRpcProvider(process.env.ARB_RPC_URL, {
+      name: "Arbitrum Sepolia",
+      chainId: 421614,
+    });
+
+    const ARBwallet = new ethers.Wallet(PRIVATE_KEY, ARBprovider);
+    const ARBowner = ARBwallet.connect(ARBprovider);
+
+    const ARByourContract = new ethers.Contract(ARBcollectionAddress, abi, ARBowner);
+    await ARByourContract.safeMint(sentToAddress);
 
     //ALFAJORES
     const provider = new ethers.JsonRpcProvider(process.env.ALFAJORES_RPC_URL, {

@@ -24,7 +24,7 @@ export default function DashboardComponent() {
         <CardContent>
           <p className="text-sm text-gray-600">93 Feet East</p>
           <Button onClick={sellItem}>Sell</Button>
-          <Badge variant="secondary">+776</Badge>
+          <Button onClick={()=> console.log("JA")}>Entrance Verify</Button>
         </CardContent>
       </Card>
     )

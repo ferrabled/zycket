@@ -57,6 +57,24 @@ export async function POST(req: Request, res: Response) {
     const SPICYcontractAddress = await SPICYdeploy.getAddress();
     console.log("SPICY Contract deployed to:", await SPICYdeploy.getAddress());
 
+    //ARBITRUM
+    const ARBprovider = new ethers.JsonRpcProvider(process.env.ARB_RPC_URL, {
+      name: "Arbitrum Sepolia",
+      chainId: 421614,
+    });
+
+    const ARBwallet = new ethers.Wallet(PRIVATE_KEY, ARBprovider);
+    const ARBowner = ARBwallet.connect(ARBprovider);
+
+    const ARBcontractFactory = new ethers.ContractFactory(abi, bytecode, ARBwallet);
+    const ARBdeploy = await ARBcontractFactory.deploy(
+      ARBowner.getAddress(),
+      metadataUri
+    );
+
+    await ARBdeploy.waitForDeployment();
+    const ARBcontractAddress = await ARBdeploy.getAddress();
+    console.log("ARBITRUM SEPOLIA Contract deployed to:", await ARBdeploy.getAddress());
 
     //ALFAJORES
     const provider = new ethers.JsonRpcProvider(process.env.ALFAJORES_RPC_URL, {
@@ -76,6 +94,8 @@ export async function POST(req: Request, res: Response) {
     await deploy.waitForDeployment();
     const contractAddress = await deploy.getAddress();
     console.log("ALFAJORES Contract deployed to:", await deploy.getAddress());
+
+    
 
     return new Response(JSON.stringify({ status: "Sucess", contractAddress }), {
       status: 200,
