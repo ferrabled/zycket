@@ -1,7 +1,7 @@
 
 # Zycket
 
-A brief description of what this project does and who it's for
+Zycket revolutionizes event ticketing with blockchain, offering secure, unique NFT tickets for a fraud-free, enhanced attendee experience. Designed for event organizers, venues, and attendees seeking a transparent ticketing solution.
 
 
 ## Acknowledgements
