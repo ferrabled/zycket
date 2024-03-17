@@ -1,3 +1,4 @@
+![image](https://github.com/ferrabled/zycket/assets/25582731/1dbda16b-71b7-4375-bda5-fdac9419dc42)
 # Zycket
 
 ## Brief Description
