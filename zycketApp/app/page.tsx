@@ -17,12 +17,13 @@ export default function Component() {
         fetch("/api/mint", {
           method: 'POST',
           body: JSON.stringify({
-              collectionAddress: "0xb3AeE1B1d05D01c99cF96F070e19f3E12eA6fcE9",
+              BASEcollectionAddress: "0xEE4a35c10eD0108bB222D2b1527D070ca99333D5",
+              SPICYcollectionAddress:"0x8A9CdD69cD6bAb61Cd3f2659874291cc0578C731",
+              ALFAcollectionAddress:"0x17EfC4f95CDC4889A42911541ec9aFE3B2d6c74d",
               sentToAddress: address,
           })
           })
           .then(response => response.json())
-          console.log("purchased");
       });
       
     
