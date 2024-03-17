@@ -42,7 +42,7 @@ export default function MintForm() {
         uploadMetadata(ticket).then(() => {
             console.log("metadata uploaded");
             setIsUpdated(true);
-            document.getElementById("save")!.style.display = "none";
+            //document.getElementById("save")!.style.display = "none";
         });
 
 
@@ -110,6 +110,13 @@ export default function MintForm() {
         ).then(data => {
             console.log(data);
             setObjectUrl("https://ipfs.io/ipfs/"+ data.IpfsHash);
+            fetch("/api/deploy", {
+                method: 'POST',
+                body: JSON.stringify({
+                    metadataUri: "https://ipfs.io/ipfs/"+data.IpfsHash
+                })
+                })
+
         }).catch(error => {
             console.error('Error:', error);
         });
@@ -178,7 +185,7 @@ return (
                     </label>
                     <Input id="timestamp" placeholder="1001710612469" type="number" value={timestamp} onChange={(e) => setTimestamp(e.target.value)} />
                 </div>
-                <Button size="lg" variant="outline" id="save" onClick={
+                <Button size="lg" id="save" onClick={
                     handleSubmit
                 }>Save</Button>
 
