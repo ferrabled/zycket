@@ -129,7 +129,8 @@ export default function MintForm() {
 
 
 return (
-    <Card className="m-auto mt-10 sm:w-auto md:w-2/3 ">
+    <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300">
+    <Card className="m-auto mt-10 sm:w-auto md:w-2/3">
         <CardHeader className="flex items-start gap-2">
             <CardTitle>Create your Tickets</CardTitle>
             <CardDescription>You're now creating the tickets for your next big event! Congratulations 🎉</CardDescription>
@@ -192,5 +193,7 @@ return (
             </div>
         </CardContent>
     </Card>
+
+    </div>
 );
 }
