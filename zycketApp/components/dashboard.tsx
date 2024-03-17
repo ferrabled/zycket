@@ -3,6 +3,27 @@ import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/com
 import { Badge } from "@/components/ui/badge"
 
 export default function DashboardComponent() {
+  
+  function Event() {
+    function sellItem() {
+      console.log('purchased');
+    }
+  
+    return (
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>ETHLondon</CardTitle>
+          <CardDescription>Emirates Stadium, London</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-gray-600">93 Feet East</p>
+          <Button onClick={sellItem}>Sell</Button>
+          <Badge variant="secondary">+776</Badge>
+        </CardContent>
+      </Card>
+    )
+  }
+  
   return (
     <div key="1" className="min-h-screen bg-gray-100 p-8">
       <main>
@@ -17,17 +38,7 @@ export default function DashboardComponent() {
           <div>
             <h3 className="text-lg font-semibold text-gray-600 mb-4">Thursday, March 14</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>Arsenal vs. Chelsea</CardTitle>
-                  <CardDescription>Emirates Stadium, London</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-600">93 Feet East</p>
-                  <Button variant="ghost">Attendee</Button>
-                  <Badge variant="secondary">+776</Badge>
-                </CardContent>
-              </Card>
+              <Event />
               <Card className="w-full">
                 <CardHeader>
                   <CardTitle>Manchester United vs. Liverpool</CardTitle>
