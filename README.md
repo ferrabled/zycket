@@ -35,8 +35,6 @@ Zycket is a blockchain-based NFT ticketing platform designed to address and solv
 ## API Reference
 
 ### Get all items
-```http
-GET /api/items
 
 ## Lessons Learned
 
