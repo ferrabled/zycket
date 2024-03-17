@@ -1,4 +1,5 @@
 ![image](https://github.com/ferrabled/zycket/assets/25582731/1dbda16b-71b7-4375-bda5-fdac9419dc42)
+<img width="592" alt="Captura de pantalla 2024-03-16 a las 23 31 01" src="https://github.com/ferrabled/zycket/assets/25582731/d9bc4662-4819-4776-85e3-41a2c679867d">
 # Zycket
 
 ## Brief Description
