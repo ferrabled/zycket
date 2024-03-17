@@ -43,7 +43,7 @@ const deployYourContract2: DeployFunction = async function (hre: HardhatRuntimeE
 
   const deploySmartContract = await deploy("Zycket", {
     from: deployer,
-    args: [deployer],
+    args: [deployer, "test"],
     log: true,
     autoMine: true,
   });
