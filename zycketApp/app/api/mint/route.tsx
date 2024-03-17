@@ -1,37 +1,48 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ethers } from "ethers";
-const abi = require("../../../contracts/Zycket.json").abi;
+const abi = require("../../../contracts/abi.json").abi;
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export async function POST(req: Request, res: Response) {
   try {
-    const collectionAddress = req.body.collectionAddress;
-    const sentToAddress = req.body.sentToAddress;
+    const { collectionAddress, sentToAddress } = await req.json();
 
     if (!collectionAddress) {
-      res.status(400).json({ message: "contractAddress is required" });
-      return;
+      return new Response(
+        JSON.stringify({ message: "contractAddress is required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
     }
     if (!sentToAddress) {
-      res.status(400).json({ message: "sentToAddress is required" });
-      return;
+      return new Response(
+        JSON.stringify({ message: "sentToAddress is required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
     }
 
     const PRIVATE_KEY = process.env.PRIVATE_KEY ?? "";
-    const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
+    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
     const owner = wallet.connect(provider);
 
     const yourContract = new ethers.Contract(collectionAddress, abi, owner);
     await yourContract.safeMint(sentToAddress);
 
-    res.status(200).json({
-      message: "Sucess",
+    return new Response(JSON.stringify({ status: "Sucess" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Error", output: error });
+
+    return new Response(JSON.stringify({ message: "Error", output: error }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

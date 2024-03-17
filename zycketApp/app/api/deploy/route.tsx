@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { ethers, providers } from "ethers";
+import { ethers } from "ethers";
 const abi = require("../../../contracts/abi.json").abi;
 const bytecode = require("../../../contracts/abi.json").bytecode;
 
@@ -18,26 +18,27 @@ export async function POST(req: Request, res: Response) {
     }
 
     const PRIVATE_KEY = process.env.PRIVATE_KEY ?? "";
-    const provider = new providers.JsonRpcProvider(process.env.RPC_URL);
+    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL, {
+      name: "alfajores",
+      chainId: 44787,
+    });
+
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
     const owner = wallet.connect(provider);
 
-    const contractFactory = new ethers.ContractFactory(
-      abi,
-      bytecode,
-      owner
-    );
-    const deploy = await contractFactory.connect(owner).deploy(
+    const contractFactory = new ethers.ContractFactory(abi, bytecode, wallet);
+    const deploy = await contractFactory.deploy(
       owner.getAddress(),
       metadataUri
     );
 
-    await deploy.deployed();
+    await deploy.waitForDeployment();
+    const contractAddress = await deploy.getAddress();
+    console.log("Contract deployed to:", await deploy.getAddress());
 
-    console.log("Contract deployed to:", deploy.address);
-
-    return new Response("Sucess", {
+    return new Response(JSON.stringify({ status: "Sucess", contractAddress }), {
       status: 200,
+      headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
     console.error(error);
