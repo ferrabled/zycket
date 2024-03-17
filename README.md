@@ -1,6 +1,7 @@
 ![image](https://github.com/ferrabled/zycket/assets/25582731/1dbda16b-71b7-4375-bda5-fdac9419dc42)
-<img width="592" alt="Captura de pantalla 2024-03-16 a las 23 31 01" src="https://github.com/ferrabled/zycket/assets/25582731/d9bc4662-4819-4776-85e3-41a2c679867d">
+
 # Zycket
+https://zycket.vercel.app/
 
 ## Brief Description
 Zycket revolutionizes event ticketing with blockchain, offering secure, unique NFT tickets for a fraud-free, enhanced attendee experience. Tailored for event organizers, venues, and attendees seeking transparent, reliable ticketing solutions.
@@ -37,6 +38,24 @@ Zycket is a blockchain-based NFT ticketing platform designed to address and solv
 ## API Reference
 
 ### Get all items
+
+##Webapp
+
+<img width="1728" alt="Captura de pantalla 2024-03-17 a las 1 48 20" src="https://github.com/ferrabled/zycket/assets/25582731/551649a6-8e8a-44e2-afb1-c66fa688173c">
+
+<img width="1728" alt="Captura de pantalla 2024-03-17 a las 1 48 27" src="https://github.com/ferrabled/zycket/assets/25582731/5465d34b-dae2-4a26-8d3f-62b4a69e5983">
+
+<img width="1728" alt="Captura de pantalla 2024-03-17 a las 1 48 40" src="https://github.com/ferrabled/zycket/assets/25582731/a5cc0c31-60da-4fd4-ad77-801cea6a8c9a">
+
+<img width="1728" alt="Captura de pantalla 2024-03-17 a las 1 48 49" src="https://github.com/ferrabled/zycket/assets/25582731/2eeb56b2-fc0c-4436-8339-3dd2d7dde703">
+
+<img width="1728" alt="Captura de pantalla 2024-03-17 a las 1 49 08" src="https://github.com/ferrabled/zycket/assets/25582731/7f56ad8f-7c56-4bbc-9ba5-998f8246e700">
+
+
+## Screenshots
+![image1](https://github.com/ferrabled/zycket/assets/25582731/629c262b-ab77-4423-bd6e-04e8caf2c58b)
+
+![image](https://github.com/ferrabled/zycket/assets/25582731/533fa26b-4418-4899-9242-d011c6267641)
 
 ## Lessons Learned
 
