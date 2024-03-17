@@ -1,202 +1,39 @@
-
 # Zycket
 
-Zycket revolutionizes event ticketing with blockchain, offering secure, unique NFT tickets for a fraud-free, enhanced attendee experience. Designed for event organizers, venues, and attendees seeking a transparent ticketing solution.
+## Brief Description
+Zycket revolutionizes event ticketing with blockchain, offering secure, unique NFT tickets for a fraud-free, enhanced attendee experience. Tailored for event organizers, venues, and attendees seeking transparent, reliable ticketing solutions.
 
+## Detailed Project Description
+Zycket is a blockchain-based NFT ticketing platform designed to address and solve the prevalent issues in the traditional ticketing industry, such as fraud, lack of transparency, and inefficient resale markets. By leveraging the power of blockchain technology, Zycket offers a secure and transparent platform where each ticket is minted as a unique NFT, ensuring authenticity and ownership.
 
-## Acknowledgements
+**Target Audience:**
+- Event organizers looking for a secure, transparent ticketing solution.
+- Venues aiming to offer a seamless ticketing experience.
+- Attendees seeking fraud-free, straightforward access to events.
+
+**Key Features:**
+- **Secure NFT Ticketing:** Each ticket is a unique, secure NFT, eliminating counterfeits.
+- **Fraud Prevention:** Blockchain technology ensures tickets are authentic and transactions are secure.
+- **Seamless Resale Marketplace:** A user-friendly platform for safe ticket resales at fair prices.
+- **User-Friendly Interface:** An intuitive app design that makes buying, selling, and managing tickets easy.
+- **Blockchain-Powered Transparency:** Full transparency of ticket life cycles for organizers and attendees.
+
+## Technologies Used
+
+**Blockchain Platform:** Ethereum and Base, for smart contract development and deployment, providing a secure, decentralized foundation for our NFT tickets.
+
+**Frontend:** React, chosen for its efficiency in building dynamic, single-page applications, integrated with the Dynamic.xyz React SDK to streamline the onboarding UX.
+
+**Backend:** Node.js with Express, creating a robust server-side framework that interacts seamlessly with blockchain through the Web3.js library.
+
+**Database:** IPFS for decentralized data storage, ensuring security and permanence of event details, with MongoDB or PostgreSQL to manage relational data aspects.
+
+**Identity Verification:** Worldcoin's World ID integration for secure, privacy-preserving user verification, enhancing trust and safety on the platform.
+
+**Other Integrations:** Celo for efficient microtransactions and Chiliz for incorporating fan engagement through utility tokens.
 
 ## API Reference
 
-## Appendix
-
-Any additional information goes here
-
-## Authors
-
-- https://github.com/JulioMCruz
-- https://github.com/Peixer
-- https://github.com/alexgarces98
-- https://github.com/ferrabled
-
-
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
-## Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
-
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## Demo
-
-Insert gif or link to demo
-
-
-## Deployment
-
-
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-
-## FAQ
-
-#### Question 1
-
-Answer 1
-
-#### Question 2
-
-Answer 2
-
-
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
-
-## Feedback
-
-If you have any feedback, please reach out to us at fake@fake.com
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-
-## Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-    
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
-
-
-## Related
-
-Here are some related projects
-
-[Awesome README](https://github.com/matiassingers/awesome-readme)
-
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
-
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
-
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
-
-
-## Tech Stack
-
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
-
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
+### Get all items
+```http
+GET /api/items
